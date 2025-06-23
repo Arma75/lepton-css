@@ -252,6 +252,9 @@ textarea {
 /**
  * utils
  */
+.clickable {
+    cursor: pointer;
+}
 .card {
     background-color: rgb(var(--neutral-color-100));
     border-radius: 1.5rem;
@@ -273,6 +276,34 @@ textarea {
 .flex.row,
 .inline-flex.row {
     flex-direction: row;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+.items-center {
+    align-items: center;
+}
+.contents-center {
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+.flex-grow-0 {
+    flex-grow: 0;
+}
+.flex-grow-1 {
+    flex-grow: 1;
 }
 
 .flex.gap-0,
