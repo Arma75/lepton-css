@@ -1,0 +1,82 @@
+$properties: (
+    "width": "w",
+    "height": "h",
+    "min-width": "min-w",
+    "min-height": "min-h",
+    "max-width": "max-w",
+    "max-height": "max-h"
+);
+
+$dimensions: (
+    "rem": (min: 1, max: 400, step: 0.25, unit: "rem"),
+    "em": (min: 1, max: 400, step: 0.25, unit: "em"),
+    "px": (min: 1, max: 400, step: 1, unit: "px"),
+    "per": (min: 1, max: 200, step: 1, unit: "%"),
+    "vw": (min: 1, max: 200, step: 1, unit: "vw"),
+    "vh": (min: 1, max: 200, step: 1, unit: "vy")
+);
+
+@each $dabbr, $range in $dimensions {
+    // "rem"을 디폴트 단위로 사용
+    // wh-10 = wh-10rem
+    @if $dabbr == "rem" {
+        @for $i from map-get($range, "min") through map-get($range, "max") {
+            .wh-#{$i} {
+                width: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+                height: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            }
+        }
+        @for $i from map-get($range, "min") through map-get($range, "max") {
+            .min-wh-#{$i} {
+                min-width: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+                min-height: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            }
+        }
+        @for $i from map-get($range, "min") through map-get($range, "max") {
+            .max-wh-#{$i} {
+                max-width: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+                max-height: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            }
+        }
+    }
+
+    @for $i from map-get($range, "min") through map-get($range, "max") {
+        .wh-#{$i}#{$dabbr} {
+            width: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            height: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+        }
+    }
+    @for $i from map-get($range, "min") through map-get($range, "max") {
+        .min-wh-#{$i}#{$dabbr} {
+            min-width: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            min-height: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+        }
+    }
+    @for $i from map-get($range, "min") through map-get($range, "max") {
+        .max-wh-#{$i}#{$dabbr} {
+            max-width: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            max-height: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+        }
+    }
+}
+
+@each $prop, $abbr in $properties {
+    @each $dabbr, $range in $dimensions {
+        // "rem"을 디폴트 단위로 사용
+        // w-10 = w-10rem
+        // h-10 = h-10rem
+        @if $dabbr == "rem" {
+            @for $i from map-get($range, "min") through map-get($range, "max") {
+                .#{$abbr}-#{$i} {
+                    #{$prop}: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+                }
+            }
+        }
+
+        @for $i from map-get($range, "min") through map-get($range, "max") {
+            .#{$abbr}-#{$i}#{$dabbr} {
+                #{$prop}: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+            }
+        }
+    }
+}
