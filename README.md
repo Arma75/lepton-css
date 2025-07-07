@@ -9,7 +9,6 @@ lepton-css는 HTML 태그의 기본 UI 디자인을 설정하고, 다양한 스�
 3. ROUNDED한 디자인
 4. 스크립트를 사용하지 않고 오직 스타일시트로만 제공
 5. 스타일 속성을 지정할 수 있는 각종 유틸 클래스 제공
-6. 약어를 외울 러닝커브를 줄일 수 있도록 약어 지양
 
 ## 🖥️ Examples
 - [codepen: lepton-css buttons](https://codepen.io/saturday_off/pen/emNQMEd)

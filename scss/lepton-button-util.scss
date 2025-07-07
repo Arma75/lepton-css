@@ -1,0 +1,58 @@
+button {
+    &.btn-primary {
+        background-color: rgb(var(--primary-color-500));
+        border: 1px solid rgb(var(--primary-color-600));
+        color: rgb(var(--primary-color-50));
+    }
+    &.btn-secondary {
+        background-color: rgb(var(--secondary-color-500));
+        border: 1px solid rgb(var(--secondary-color-600));
+        color: rgb(var(--secondary-color-50));
+    }
+}
+
+$button-height-base: 2.75rem;
+$button-padding-x-base: 1.5rem;
+$button-font-size-base: 1rem;
+
+$sm-steps: 4;
+$sm-height-factor: 0.25rem;
+$sm-padding-x-factor: 0.125rem;
+$sm-font-size-factor: 0.125rem;
+
+$lg-steps: 4;
+$lg-height-factor: 0.25rem;
+$lg-padding-x-factor: 0.125rem;
+$lg-font-size-factor: 0.125rem;
+
+button {
+    @for $i from $sm-steps through 2 {
+        &.btn-#{$i}sm {
+            height: $button-height-base - ($i * $sm-height-factor);
+            padding: 0 $button-padding-x-base - ($i * $sm-padding-x-factor);
+            font-size: $button-font-size-base - ($i * $sm-font-size-factor);
+        }
+    }
+    &.btn-sm {
+        height: $button-height-base - $sm-height-factor;
+        padding: 0 $button-padding-x-base - $sm-padding-x-factor;
+        font-size: $button-font-size-base - $sm-font-size-factor;
+    }
+    &.btn-md {
+        height: $button-height-base;
+        padding: 0 $button-padding-x-base;
+        font-size: $button-font-size-base;
+    }
+    &.btn-lg {
+        height: $button-height-base + $lg-height-factor;
+        padding: 0 $button-padding-x-base + $lg-padding-x-factor;
+        font-size: $button-font-size-base + $lg-font-size-factor;
+    }
+    @for $i from 2 through $sm-steps {
+        &.btn-#{$i}lg {
+            height: $button-height-base + ($i * $lg-height-factor);
+            padding: 0 $button-padding-x-base + ($i * $lg-padding-x-factor);
+            font-size: $button-font-size-base + ($i * $lg-font-size-factor);
+        }
+    }
+}
