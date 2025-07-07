@@ -2,6 +2,7 @@
 @import url("lepton-border-util.css");
 @import url("lepton-flex-util.css");
 @import url("lepton-button.css");
+@import url("lepton-button-util.css");
 
 :root {
     --primary-color-950: 15, 0, 61;
