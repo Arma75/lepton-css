@@ -3,6 +3,7 @@ button {
   padding: 0 1.5rem;
   border-radius: 999em;
   font-size: 1rem;
+  font-weight: 500;
   background-color: rgb(var(--neutral-color-100));
   border: 1px solid rgb(var(--neutral-color-200));
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1333333333);
