@@ -3,6 +3,9 @@
 @import url("lepton-flex-util.css");
 @import url("lepton-button.css");
 @import url("lepton-button-util.css");
+@import url("lepton-padding-util.css");
+@import url("lepton-text-util.css");
+@import url("lepton-radius-util.css");
 
 :root {
     --primary-color-950: 15, 0, 61;
@@ -451,70 +454,6 @@ textarea {
     box-shadow: 0 0.5rem 1rem rgba(var(--black-color), 0.15); /* 강한 그림자 */
 }
 
-.pad-0 {
-    padding: 0rem;
-}
-.pad-1 {
-    padding: 0.25rem;
-}
-.pad-2 {
-    padding: 0.5rem;
-}
-.pad-3 {
-    padding: 0.75rem;
-}
-.pad-4 {
-    padding: 1rem;
-}
-.pad-5 {
-    padding: 1.25rem;
-}
-.pad-6 {
-    padding: 1.5rem;
-}
-.pad-7 {
-    padding: 1.75rem;
-}
-.pad-8 {
-    padding: 2rem;
-}
-.pad-9 {
-    padding: 2.25rem;
-}
-.pad-10 {
-    padding: 2.5rem;
-}
-.pad-11 {
-    padding: 2.75rem;
-}
-.pad-12 {
-    padding: 3rem;
-}
-.pad-13 {
-    padding: 3.25rem;
-}
-.pad-14 {
-    padding: 3.5rem;
-}
-.pad-15 {
-    padding: 3.75rem;
-}
-.pad-16 {
-    padding: 4rem;
-}
-.pad-17 {
-    padding: 4.25rem;
-}
-.pad-18 {
-    padding: 4.5rem;
-}
-.pad-19 {
-    padding: 4.75rem;
-}
-.pad-20 {
-    padding: 5rem;
-}
-
 .trans-duration-0 {
     transition: 0s all;
 }
@@ -547,47 +486,4 @@ textarea {
 }
 .trans-duration-10 {
     transition: 1s all;
-}
-
-.txt-lvl-1 {
-    color: rgb(var(--neutral-color-950));
-}
-.txt-lvl-2 {
-    color: rgb(var(--neutral-color-900));
-}
-.txt-lvl-3 {
-    color: rgb(var(--neutral-color-800));
-}
-.txt-lvl-4 {
-    color: rgb(var(--neutral-color-700));
-}
-.txt-lvl-5 {
-    color: rgb(var(--neutral-color-600));
-}
-.txt-w-thin {
-    font-weight: 100;
-}
-.txt-w-extralight {
-    font-weight: 200;
-}
-.txt-w-light {
-    font-weight: 300;
-}
-.txt-w-normal {
-    font-weight: 400;
-}
-.txt-w-medium {
-    font-weight: 500;
-}
-.txt-w-semibold {
-    font-weight: 600;
-}
-.txt-w-bold {
-    font-weight: 700;
-}
-.txt-w-extrabold {
-    font-weight: 800;
-}
-.txt-w-black {
-    font-weight: 900;
 }

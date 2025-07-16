@@ -1,0 +1,14 @@
+$dimensions: (
+    "border-radius": (min: 0, max: 20, step: 0.25, unit: "rem")
+);
+
+@each $dabbr, $range in $dimensions {
+    @for $i from map-get($range, "min") through map-get($range, "max") {
+        .radius-#{$i} {
+            border-radius: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+        }
+    }
+}
+.radius-full {
+    border-radius: 999em;
+}

@@ -1,0 +1,75 @@
+$dimensions: (
+    "font-size": (min: 0, max: 20, step: 0.25, unit: "rem")
+);
+
+@each $dabbr, $range in $dimensions {
+    @for $i from map-get($range, "min") through map-get($range, "max") {
+        .font-size-#{$i} {
+            font-size: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
+        }
+    }
+}
+
+$color-shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950);
+@each $shade in $color-shades {
+    .fg-primary-color-#{$shade} {
+        color: rgb(var(--primary-color-#{$shade}));
+    }
+    .fg-secondary-color-#{$shade} {
+        color: rgb(var(--secondary-color-#{$shade}));
+    }
+    .fg-neutral-color-#{$shade} {
+        color: rgb(var(--neutral-color-#{$shade}));
+    }
+}
+.fg-white {
+    color: rgb(var(--white-color));
+}
+.fg-black {
+    color: rgb(var(--black-color));
+}
+
+
+
+.txt-lvl-1 {
+    color: rgb(var(--neutral-color-950));
+}
+.txt-lvl-2 {
+    color: rgb(var(--neutral-color-900));
+}
+.txt-lvl-3 {
+    color: rgb(var(--neutral-color-800));
+}
+.txt-lvl-4 {
+    color: rgb(var(--neutral-color-700));
+}
+.txt-lvl-5 {
+    color: rgb(var(--neutral-color-600));
+}
+.txt-w-thin {
+    font-weight: 100;
+}
+.txt-w-extralight {
+    font-weight: 200;
+}
+.txt-w-light {
+    font-weight: 300;
+}
+.txt-w-normal {
+    font-weight: 400;
+}
+.txt-w-medium {
+    font-weight: 500;
+}
+.txt-w-semibold {
+    font-weight: 600;
+}
+.txt-w-bold {
+    font-weight: 700;
+}
+.txt-w-extrabold {
+    font-weight: 800;
+}
+.txt-w-black {
+    font-weight: 900;
+}

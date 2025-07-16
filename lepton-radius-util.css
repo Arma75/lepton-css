@@ -1,0 +1,87 @@
+.radius-0 {
+  border-radius: 0rem;
+}
+
+.radius-1 {
+  border-radius: 0.25rem;
+}
+
+.radius-2 {
+  border-radius: 0.5rem;
+}
+
+.radius-3 {
+  border-radius: 0.75rem;
+}
+
+.radius-4 {
+  border-radius: 1rem;
+}
+
+.radius-5 {
+  border-radius: 1.25rem;
+}
+
+.radius-6 {
+  border-radius: 1.5rem;
+}
+
+.radius-7 {
+  border-radius: 1.75rem;
+}
+
+.radius-8 {
+  border-radius: 2rem;
+}
+
+.radius-9 {
+  border-radius: 2.25rem;
+}
+
+.radius-10 {
+  border-radius: 2.5rem;
+}
+
+.radius-11 {
+  border-radius: 2.75rem;
+}
+
+.radius-12 {
+  border-radius: 3rem;
+}
+
+.radius-13 {
+  border-radius: 3.25rem;
+}
+
+.radius-14 {
+  border-radius: 3.5rem;
+}
+
+.radius-15 {
+  border-radius: 3.75rem;
+}
+
+.radius-16 {
+  border-radius: 4rem;
+}
+
+.radius-17 {
+  border-radius: 4.25rem;
+}
+
+.radius-18 {
+  border-radius: 4.5rem;
+}
+
+.radius-19 {
+  border-radius: 4.75rem;
+}
+
+.radius-20 {
+  border-radius: 5rem;
+}
+
+.radius-full {
+  border-radius: 999em;
+}
