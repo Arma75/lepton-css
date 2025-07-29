@@ -1,0 +1,92 @@
+
+.flex {
+    display: flex;
+}
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-col-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+.items-flex-start {
+    align-items: flex-start;
+}
+.items-flex-end {
+    align-items: flex-end;
+}
+.items-stretch {
+    align-items: stretch;
+}
+.items-baseline {
+    align-items: baseline;
+}
+
+.contents-center {
+    justify-content: center;
+}
+.contents-flex-start {
+    justify-content: flex-start;
+}
+.contents-flex-end {
+    justify-content: flex-end;
+}
+.contents-space-between {
+    justify-content: space-between;
+}
+.contents-space-around {
+    justify-content: space-around;
+}
+.contents-space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+.flex-grow-0 {
+    flex-grow: 0;
+}
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+$dimensions: (
+    "padding": (min: 0, max: 20, step: 0.25, unit: "rem")
+);
+
+@each $dabbr, $range in $dimensions {
+    @for $i from map-get($range, "min") through map-get($range, "max") {
+        .flex-gap-#{$i} {
+            gap: 0rem;
+        }
+    }
+}
