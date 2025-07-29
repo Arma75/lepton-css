@@ -7,24 +7,61 @@
         <link rel="stylesheet" href="../lepton.css" type="text/css"/>
     </head>
 
+    <style>
+        .tab {
+            display: inline-flex;
+            gap: 0.5rem;
+            /* background-color: rgb(var(--neutral-color-50));
+            border-radius: 999em;
+            padding: 0.5rem; */
+        }
+        .tab > li {
+            height: 2.75rem;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999em;
+            cursor: pointer;
+        }
+        .tab > li.selected {
+            background-color: rgb(var(--primary-color-100));
+            color: rgb(var(--primary-color-500));
+        }
+
+        .stroke-icon > path {
+            fill: none;
+            stroke: rgb(var(--neutral-color-900));
+            stroke-linecap: round;
+            stroke-width: 1.5;
+        }
+    </style>
+
     <body class="pad-10">
+        <article class="pad-4">
+            <ul class="tab">
+                <li class="selected">item1</li>
+                <li>item2321421412</li>
+            </ul>
+        </article>
+
         <section class="flex flex-col w-95 h-195 bg-neutral-color-100">
-            <section class="flex contents-space-between">
+            <section class="pad-3 flex contents-space-between">
                 <article>
-                    <ul class="tab" style="display: flex; gap: 0.5rem;">
-                        <li>전체</li>
+                    <ul class="tab">
+                        <li class="selected">전체</li>
                         <li>이미지</li>
                     </ul>
                 </article>
 
-                <article class="flex ">
-                    <svg class="wh-8" viewBox="0 0 24 24">
-                        <path d="M4 4 L10 4 L10 10 L4 10Z" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
-                        <path d="M17 4 a3 3 0 0 1 3 3 a3 3 0 0 1 -3 3 a3 3 0 0 1 -3 -3 a3 3 0 0 1 3 -3" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
-                        <path d="M7 14 a3 3 0 0 1 3 3 a3 3 0 0 1 -3 3 a3 3 0 0 1 -3 -3 a3 3 0 0 1 3 -3" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
-                        <path d="M14 14 L20 14 L20 20 L14 20Z" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
-                        <!-- <path d="M14 14 L20 14 a6 6 0 0 1 -6 6Z" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"></path> -->
+                <article class="flex flex-center flex-gap-2">
+                    <svg class="stroke-icon wh-8" viewBox="0 0 24 24">
+                        <path d="M4 4 L10 4 L10 10 L4 10Z"></path>
+                        <path d="M17 4 a3 3 0 0 1 3 3 a3 3 0 0 1 -3 3 a3 3 0 0 1 -3 -3 a3 3 0 0 1 3 -3"></path>
+                        <path d="M7 14 a3 3 0 0 1 3 3 a3 3 0 0 1 -3 3 a3 3 0 0 1 -3 -3 a3 3 0 0 1 3 -3"></path>
+                        <path d="M14 14 L20 14 L20 20 L14 20Z"></path>
                     </svg>
+
                     <div class="bg-primary-color-300 wh-11 radius-full"></div>
                 </article>
             </section>

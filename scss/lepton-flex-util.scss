@@ -86,7 +86,7 @@ $dimensions: (
 @each $dabbr, $range in $dimensions {
     @for $i from map-get($range, "min") through map-get($range, "max") {
         .flex-gap-#{$i} {
-            gap: 0rem;
+            gap: #{$i * map-get($range, "step")}#{map-get($range, "unit")};
         }
     }
 }
